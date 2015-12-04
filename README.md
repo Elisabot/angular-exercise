@@ -4,7 +4,7 @@ In this AngularJS Exercise I aim to achieve the following:
 
 2. Provide users with a way to randomly shuffle the deck.
 
-3. Provide users with the means to sort the deck in ascending order.
+3. Provide users with the means to sort the deck in ascending order. I am defining ascending order as A>K Spades, Diamonds, Clubs, Hearts.
 
 
 

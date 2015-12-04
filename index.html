@@ -1,15 +1,29 @@
-<!DOCTYPE html ng-app="">
-<html>
+<!DOCTYPE html>
+<html ng-app="cardApp">
 <head>
-	<title></title>
+	<title>Angular Card Sorting Exercise</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 </head>
 <body>
 
-<div>
-	<input class="button" ng-click="" />
-</div>
+	<div ng-controller="mainCtrl">
+	
+		<!-- cards go here -->
+		<div>
+			<h1>cards go here</h1>
+		</div>
+
+		<!-- shuffle and sort buttons -->
+		<div>
+			<input class="btn btn-default btn-lg" type="button" value="Shuffle" ng-click="shuffleButton()" />
+
+			<input class="btn btn-default btn-lg" type="button" value="Sort" ng-click="sortButton()" />
+		</div>
+	</div>
+
+	<!-- our js and any other script dependencies -->
+	<script type="text/javascript" src="app.js"></script>
 
 </body>
 </html>
