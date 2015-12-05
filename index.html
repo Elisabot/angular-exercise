@@ -3,15 +3,18 @@
 <head>
 	<title>Angular Card Sorting Exercise</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 </head>
 <body>
 
-	<div ng-controller="mainCtrl">
-	
+	<div ng-controller="cardCtrl">
+
 		<!-- cards go here -->
 		<div>
-			<h1>cards go here</h1>
+			<div ng-repeat="card in cards">
+				<img class="card" ng-src="{{ card.img }}">
+			</div>
 		</div>
 
 		<!-- shuffle and sort buttons -->

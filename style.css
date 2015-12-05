@@ -1,0 +1,7 @@
+/*Let's make this card sort stylish*/
+
+.card {
+	margin: 5px;
+	float: left;
+	width: 50px;
+}
