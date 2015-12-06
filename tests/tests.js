@@ -2,14 +2,14 @@ describe('cardCtrl', function() {
   beforeEach(module('cardApp'));
 
   var $controller;
-  var testAscend = [{
+  var testRank = [{
       suit: "diamond",
       rank: 2,
       name: "diamond-2",
       img: 'img/deck/diamond-2.png'
     }, { 
       suit: "diamond",
-      rank: "1",
+      rank: 1,
       name: "diamond-a",
       img: 'img/deck/diamond-1.png' 
     }, {
@@ -29,7 +29,7 @@ describe('cardCtrl', function() {
       img: 'img/deck/diamond-j.png'
   }];
 
-  var testRank = [{
+  var testSuit = [{
       suit: "club",
       rank: 5,
       name: "club-5",
@@ -51,10 +51,10 @@ describe('cardCtrl', function() {
       img: 'img/deck/heart-5.png'
     }];
 
-//all the same suit
+//all the same suit different rank
 var rankAscending = [{ 
       suit: "diamond",
-      rank: "1",
+      rank: 1,
       name: "diamond-a",
       img: 'img/deck/diamond-1.png' 
     }, {
@@ -79,7 +79,7 @@ var rankAscending = [{
       img: 'img/deck/diamond-k.png'
   }];
 
-//all the same rank
+//all the same rank different suit
 var suitAscending = [{
       suit: "spade",
       rank: 5,
@@ -119,7 +119,8 @@ var suitAscending = [{
     it('sorts the cards in suit order of Spade, Diamond, Club, Heart', function () {
       var $scope = {};
       var controller = $controller('cardCtrl', { $scope: $scope });
-      $scope.cards = testAscend;
+      $scope.cards = testSuit;
+      $scope.sort();
       expect($scope.cards).toEqual(suitAscending);
     });
   });

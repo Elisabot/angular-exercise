@@ -330,16 +330,16 @@
 		}
 
 		$scope.sort = function () {
-			console.log("hi")
+			console.log("this is sort")
+
 			var suitToNum = { 
-				spade: 1,
-				diamond: 2,
-				club: 3,
-				heart: 4
+				"spade": 1,
+				"diamond": 2,
+				"club": 3,
+				"heart": 4
 			 };
 
 			//sort suit in order of Spades, Diamonds, Clubs, Hearts
-
 			//sort the rank value in ascending order
 			$scope.cards.sort(function(cardA, cardB) {
 				if (suitToNum[cardA.suit] < suitToNum[cardB.suit]) {
@@ -354,7 +354,7 @@
 			  if (cardA.rank > cardB.rank) {
 			  	return 1;
 			  }
-			  return 0; //might be a good idea to throw an error
+			   return 0; //might be a good idea to throw an error
 			});
 		};
 
