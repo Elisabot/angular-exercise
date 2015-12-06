@@ -331,7 +331,7 @@
 		}
 
 		$scope.sort = function () {
-
+			return 
 			console.log("this is sortButton");
 		}
 
