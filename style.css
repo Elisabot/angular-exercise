@@ -3,5 +3,11 @@
 .card {
 	margin: 5px;
 	float: left;
-	width: 50px;
+	width: 75px;
+}
+
+.buttons {
+	clear: both;
+	margin: 5px;
+	text-align: center;
 }
