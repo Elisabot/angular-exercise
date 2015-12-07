@@ -327,6 +327,44 @@
 
 		$scope.shuffle = function () {
 			console.log("this is shuffle");
+
+
+			// take cardA from half1 and cardB from half2 using math.random to choose weather cardA goes in front or behind cardB
+			function interweave () {
+				$scope.shuffledDeck = [];
+				// cut the deck in half, spade-diamond and club-heart
+				$scope.firstHalfDeck = $scope.cards.slice(0, 26); 
+
+				$scope.secondHalfDeck = $scope.cards.slice(26); 
+
+				for (var i = 0; i < 26; i++) {
+				
+					var cardA = $scope.firstHalfDeck.pop();
+					var cardB = $scope.secondHalfDeck.pop();
+
+
+					var cardChoice = Math.random();
+
+					if (cardChoice < .5) {
+						$scope.shuffledDeck.push(cardA);
+						$scope.shuffledDeck.push(cardB);
+					} else { // cardchoice >= .5
+						$scope.shuffledDeck.push(cardB);
+						$scope.shuffledDeck.push(cardA);
+					}
+				};
+				$scope.cards = $scope.shuffledDeck;
+			};
+			// repeat process 5 - 7 times
+
+			var shuffleNum = Math.floor(Math.random() * (7 - 5 + 1)) + 5;
+			
+			for (var i = 0; i < shuffleNum; i++) {
+				interweave();
+			};
+			
+
+
 		}
 
 		$scope.sort = function () {
