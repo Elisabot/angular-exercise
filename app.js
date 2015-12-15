@@ -395,7 +395,12 @@
 		};
 
 	}]);
-
+	app.directive('myCard', function () {
+		return {
+			restrict: 'E',
+			templateUrl: 'my-card.html' 
+		}
+	})
 })();
 
 
