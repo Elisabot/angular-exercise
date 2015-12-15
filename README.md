@@ -8,7 +8,9 @@ In this AngularJS Exercise I aim to achieve the following:
 
 
 In order to run tests:
+
     npm install 
+    
     karma start
 
 
